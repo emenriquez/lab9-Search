@@ -1,0 +1,5 @@
+*.out
+.DS_Store
+.vscode
+solution.cpp
+solution.h
