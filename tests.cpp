@@ -7,12 +7,25 @@ using namespace std;
 
 #include "Search.h" 
 
-TEST_CASE("setup") {
-    CHECK(1==1);
+TEST_CASE("printArray") {
+	int myArr[5] = {5, 0, 4, 6, 3};
+	double myDarr[5] = {5.0, 0.0, 4.0, 6.0, 3.0};
+	string myArr2[3] = {"Hello.", "How's", "it going?"};
+	char myArr3[6] = {'g', 'a', 'b', 'a', 't', 'a'};
+
+    REQUIRE_NOTHROW(printArray(myArr, 5));
+    REQUIRE_NOTHROW(printArray(myArr2, 3));
+    REQUIRE_NOTHROW(printArray(myArr3, 6));
+    REQUIRE_NOTHROW(printArray(myDarr, 5));
 }
 
 TEST_CASE("seqSearch") {
-    CHECK(1==1);
+    string myArr2[4] = {"Hello.", "How's", "it going?", "Bye"};
+    REQUIRE_NOTHROW(seqSearch("Hi", myArr2, 0, 2));
+    CHECK(seqSearch("Hi", myArr2, 0, 2) == false);
+    CHECK(seqSearch("Hello.", myArr2, 0, 2) == true);
+    CHECK(seqSearch("Bye", myArr2, 0, 2) == false);
+    CHECK(seqSearch("Bye", myArr2, 0, 3) == true);
 }
 
 TEST_CASE("binSearch") {
