@@ -29,7 +29,7 @@ TEST_CASE("seqSearch") {
 }
 
 TEST_CASE("binSearch") {
-    float arr[5] = {1.0, 2.3, 2.2, 1.4, 0.6};
+    float arr[5] = {0.6, 1.0, 1.4, 2.2, 2.3};
 
     // check for values
     CHECK(binSearch(2.3, arr, 5) == true);

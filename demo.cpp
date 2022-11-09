@@ -16,6 +16,8 @@ int main() {
 	printArray(myArr2, 3);
 	printArray(myArr3, 6);
 
+	cout << "Array sorting test: " << endl << endl;
+
 	printArray(myDarray, 5);
 
 	newSort(myDarray, 5);
