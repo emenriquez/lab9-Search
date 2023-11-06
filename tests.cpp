@@ -43,7 +43,7 @@ TEST_CASE("binSearch") {
 }
 
 TEST_CASE("binSearchR") {
-    char arr[5] = {'h', 'e', 'l', 'o', '!'};
+    char arr[5] = {'a', 'e', 'i', 'o', 'u'};
 
     // check for values
     CHECK(binSearchR('o', arr, 5) == true);
